@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2>Contract Details</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>File hash</th>
+        <th>Contract Address</th>
+        <th>Price</th>
+         <th>Pay</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor ="let ls of propertyList">
+        <td>{{ls.Id}}</td>
+        <td>{{ls.description}}</td>
+        <td>{{ls.fileHash}}</td>
+        <td>{{ls.contractAddress}}</td>
+        <td>{{ls.confirmPrice}}</td>
+        <td> <button type="button" (click)="payment(ls)"  class="btn btn-default"> Pay </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

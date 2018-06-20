@@ -1,0 +1,25 @@
+
+
+<app-navbar></app-navbar>
+<div class="container">
+    <h2>Land Registry</h2>
+    <div class="row">
+      <div class="col col-sm-4 col-sm-offset-4">
+        <h6 style="color:green;text-align:center">{{successmsg}}</h6>
+        <h6 style="color:red;text-align:center">{{errormsg}}</h6>
+        <form >
+          <div class="form-group">
+            <label for="description">Description: {{contractDetails.description}}</label>
+          </div>
+          <div class="form-group"> 
+            <label for="price">Price: </label> 
+            <input type="text" class="form-control" id="price" [(ngModel)]="price" placeholder="Enter price" name="price"> 
+          </div>
+          <div class="form-group"> 
+            <label for="fileHash">File hash:{{contractDetails.fileHash}}</label> 
+           </div> 
+          <button type="button" class="btn btn-default"(click)="submit()">Submit</button> 
+        </form> 
+      </div> 
+    </div> 
+</div>

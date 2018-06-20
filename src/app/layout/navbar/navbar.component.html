@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a  *ngIf="role==0" class="navbar-brand" [routerLink]="['/']">Registra</a>
+        <a  *ngIf="role==1" class="navbar-brand" [routerLink]="['/']">Broker</a>
+        <a  *ngIf="role==2" class="navbar-brand" [routerLink]="['/']">Buyer</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a  [routerLink]="['/']">Home</a></li>
+        <li *ngIf="role==0"><a  [routerLink]="['/addcontract']">Add New Contract</a></li>
+        <li *ngIf="role==0 || role==2"><a  [routerLink]="['/sellercontract']">Contract for Sell</a></li>
+        <li *ngIf="role==2"><a  [routerLink]="['/getbuyercontractdetailsforsell']">Owned contract details</a></li>
+        <li *ngIf="role==2"><a  [routerLink]="['/buyercontract']">Contracts for buy</a></li>
+        <li *ngIf="role==1"><a  [routerLink]="['/brokercontract']">Contracts for broker</a></li>
+        <li *ngIf="role==2"><a  [routerLink]="['/contractsforpayment']">Contracts for pay</a></li>
+      </ul>
+    </div>
+  </nav>
